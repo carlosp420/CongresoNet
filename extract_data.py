@@ -1,11 +1,17 @@
+# -*- coding: utf-8 -*-
+import urllib
+from bs4 import BeautifulSoup
+
 
 def extract_data(url_input):
-    # Este codigo permite extraer el texto de cualquier pagina de internet que usa HTML usando la libreria BeautifulSoup4
-    #Debe seria ser más eficiente con este codigo
-    #Extraido del codigo de PeYoTlL en StackOverFLow URL: http://stackoverflow.com/questions/328356/extracting-text-from-html-file-using-python
-    import urllib
-    from bs4 import BeautifulSoup
-    
+    """
+    Este codigo permite extraer el texto de cualquier pagina de internet que
+    usa HTML usando la libreria BeautifulSoup4
+
+    * Deberia ser más eficiente con este codigo
+    * Extraido del codigo de PeYoTlL en StackOverFLow URL:
+      http://stackoverflow.com/questions/328356/extracting-text-from-html-file-using-python
+    """
     url = url_input
     html = urllib.urlopen(url).read()
     soup = BeautifulSoup(html)
